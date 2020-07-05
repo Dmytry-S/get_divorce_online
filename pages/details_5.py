@@ -40,4 +40,4 @@ class Details5Page(CommonWebDriver):
 
     def is_error_message_present(self):
         self.is_element_present(*Details5Locators.ERROR_MESSAGE)
-        
+
