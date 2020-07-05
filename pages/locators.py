@@ -26,14 +26,43 @@ class Details2Locators:
 
 
 class Details3Locators:
-    pass
+    MINOR_CHILDREN = (By.ID, "id_minor_children_0")
+    IS_WIFE_PREGNANT = (By.ID, "id_wife_pregnant_primarily_1")
+    BUTTON_SAVE = (By.CSS_SELECTOR, "button.tx-btn")
 
 
 class Details4Locators:
-    pass
+    LIVE_TOGETHER = (By.ID, "id_live_together_now_0")
+    COMMON_PROPERTY = (By.ID, "id_property_any_0")
+    COMMON_DEBT = (By.ID, "id_debts_any_1")
+    BUTTON_SAVE = (By.CSS_SELECTOR, "button.tx-btn")
 
 
 class Details5Locators:
-    pass
+    PHONE_1 = (By.ID, "id_phone1")
+    PHONE_1_VALUE = "123"
+    PHONE_2 = (By.ID, "id_phone2")
+    PHONE_2_VALUE = "678"
+    PHONE_3 = (By.ID, "id_phone3")
+    PHONE_3_VALUE = "5566"
+    PASSWORD = (By.XPATH, "xpath * //input[@name='password']")
+    PASSWORD_VALUE = "12345"
+    BUTTON_SAVE = (By.CSS_SELECTOR, "form.form > .ml-0")
+    CC_NUMBER = (By.ID, "id_ccnum")
+    CC_NUMBER_VALUE = "4111111111111111"
+    CC_EXP_MONTH = (By.ID, "id_ccexp_m")
+    CC_EXP_MONTH_VALUE = "12"
+    CC_EXP_YEAR = (By.ID, "id_ccexp_y")
+    CC_EXP_YEAR_VALUE = "2023"
+    ADDRESS = (By.ID, "id_addr1")
+    ADDRESS_VALUE = "Street, 123"
+    CITY = (By.ID, "id_city")
+    CITY_VALUE = "Jersy"
+    ZIP = (By.ID, "id_zip")
+    ZIP_CODE = "43456"
+    BUTTON_CONFIRM = (By.CSS_SELECTOR, "button.tx-btn")
+    ERROR_MESSAGE = (By.CSS_SELECTOR, ".payment--non-field-errors")
+
+
 
 

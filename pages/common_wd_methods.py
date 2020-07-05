@@ -24,3 +24,11 @@ class CommonWebDriver:
         field.clear()
         field.send_keys(text)
 
+    def is_element_present(self, locator_name, locator_value):
+        try:
+            self.browser.find_element(locator_name, locator_value)
+        except NoSuchElementException:
+            return False
+        return True
+
+
