@@ -1,10 +1,10 @@
 import pytest
-from pages.login_page import LoginPage
 from pages.details_1 import Details1Page
 from pages.details_2 import Details2Page
 from pages.details_3 import Details3Page
 from pages.details_4 import Details4Page
-import time
+from pages.details_5 import Details5Page
+from pages.login_page import LoginPage
 
 
 @pytest.mark.mock
@@ -51,4 +51,20 @@ class TestUserCanGetOnlineDivorce:
         page.have_common_property_with_spouse()
         page.have_common_debt_with_spouse()
         page.find_and_click_button_save()
-        time.sleep(10)
+
+    def test_user_can_fill_page_details5(self, browser):
+        link = "https://onlineminnesotadivorce.com/minnesota/details/5/"
+        page = Details5Page(browser, link)
+        page.open_url()
+        page.enter_phone_number()
+        page.enter_password()
+        page.find_and_click_button_save()
+        page.enter_credit_card_number()
+        page.enter_expiration_month()
+        page.enter_expiration_year()
+        page.enter_address()
+        page.enter_city_name()
+        page.enter_zip_code()
+        page.find_and_click_button_confirm()
+        page.is_error_message_present()
+

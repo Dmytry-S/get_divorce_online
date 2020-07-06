@@ -45,7 +45,7 @@ class Details5Locators:
     PHONE_2_VALUE = "678"
     PHONE_3 = (By.ID, "id_phone3")
     PHONE_3_VALUE = "5566"
-    PASSWORD = (By.XPATH, "xpath * //input[@name='password']")
+    PASSWORD = (By.XPATH, "//input[@name='password']")
     PASSWORD_VALUE = "12345"
     BUTTON_SAVE = (By.CSS_SELECTOR, "form.form > .ml-0")
     CC_NUMBER = (By.ID, "id_ccnum")

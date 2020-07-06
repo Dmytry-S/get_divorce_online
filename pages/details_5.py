@@ -1,4 +1,3 @@
-from selenium.webdriver.support.ui import Select
 from .common_wd_methods import CommonWebDriver
 from .locators import Details5Locators
 
@@ -18,13 +17,11 @@ class Details5Page(CommonWebDriver):
     def enter_credit_card_number(self):
         self.find_and_send_keys(*Details5Locators.CC_NUMBER, Details5Locators.CC_NUMBER_VALUE)
 
-    def enter_expiration_month(self, browser):
-        select = Select(browser.find_element(*Details5Locators.CC_EXP_MONTH))
-        select.select_by_value(Details5Locators.CC_EXP_MONTH_VALUE)
+    def enter_expiration_month(self):
+        self.find_element_in_list(*Details5Locators.CC_EXP_MONTH, Details5Locators.CC_EXP_MONTH_VALUE)
 
-    def enter_expiration_year(self, browser):
-        select = Select(browser.find_element(*Details5Locators.CC_EXP_YEAR))
-        select.select_by_value(Details5Locators.CC_EXP_YEAR_VALUE)
+    def enter_expiration_year(self):
+        self.find_element_in_list(*Details5Locators.CC_EXP_YEAR, Details5Locators.CC_EXP_YEAR_VALUE)
 
     def enter_address(self):
         self.find_and_send_keys(*Details5Locators.ADDRESS, Details5Locators.ADDRESS_VALUE)

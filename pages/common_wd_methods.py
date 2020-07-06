@@ -1,8 +1,5 @@
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.common.exceptions import NoAlertPresentException
-import math
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import Select
 
 
 class CommonWebDriver:
@@ -23,6 +20,10 @@ class CommonWebDriver:
         field = self.browser.find_element(locator_name, locator_value)
         field.clear()
         field.send_keys(text)
+
+    def find_element_in_list(self, locator_name, locator_value, value):
+        select = Select(self.browser.find_element(locator_name, locator_value))
+        select.select_by_value(value)
 
     def is_element_present(self, locator_name, locator_value):
         try:
