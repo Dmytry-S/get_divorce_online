@@ -1,3 +1,4 @@
+import allure
 import pytest
 from pages.details_1 import Details1Page
 from pages.details_2 import Details2Page
@@ -7,7 +8,7 @@ from pages.details_5 import Details5Page
 from pages.login_page import LoginPage
 
 
-@pytest.mark.mock
+@pytest.mark.run_tests
 class TestUserCanGetOnlineDivorce:
     def test_user_can_sign_up(self, browser):
         link = "https://onlineminnesotadivorce.com/"
