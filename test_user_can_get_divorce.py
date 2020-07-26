@@ -1,4 +1,3 @@
-import allure
 import pytest
 from pages.details_1 import Details1Page
 from pages.details_2 import Details2Page
@@ -10,7 +9,6 @@ from pages.login_page import LoginPage
 
 @pytest.mark.run_test
 class TestUserCanGetOnlineDivorce:
-    @allure.feature("Test sign in")
     def test_user_can_sign_up(self, browser):
         link = "https://onlineminnesotadivorce.com/"
         page = LoginPage(browser, link)
@@ -20,7 +18,6 @@ class TestUserCanGetOnlineDivorce:
         page.find_and_send_email()
         page.find_and_click_button_check()
 
-    @allure.feature("Test p1")
     def test_user_can_fill_page_details1(self, browser):
         link = "https://onlineminnesotadivorce.com/minnesota/details/1/"
         page = Details1Page(browser, link)
@@ -29,7 +26,6 @@ class TestUserCanGetOnlineDivorce:
         page.select_active_duty_military()
         page.find_and_click_button_save()
 
-    @allure.feature("Test p2")
     def test_user_can_fill_page_details2(self, browser):
         link = "https://onlineminnesotadivorce.com/minnesota/details/2/"
         page = Details2Page(browser, link)
@@ -39,7 +35,6 @@ class TestUserCanGetOnlineDivorce:
         page.person_filling_file()
         page.find_and_click_button_save()
 
-    @allure.feature("Test p3")
     def test_user_can_fill_page_details3(self, browser):
         link = "https://onlineminnesotadivorce.com/minnesota/details/3/"
         page = Details3Page(browser, link)
@@ -48,7 +43,6 @@ class TestUserCanGetOnlineDivorce:
         page.is_wife_pregnant()
         page.find_and_click_button_save()
 
-    @allure.feature("Test p4")
     def test_user_can_fill_page_details4(self, browser):
         link = "https://onlineminnesotadivorce.com/minnesota/details/4/"
         page = Details4Page(browser, link)
@@ -58,7 +52,6 @@ class TestUserCanGetOnlineDivorce:
         page.have_common_debt_with_spouse()
         page.find_and_click_button_save()
 
-    @allure.feature("Test p5")
     def test_user_can_fill_page_details5(self, browser):
         link = "https://onlineminnesotadivorce.com/minnesota/details/5/"
         page = Details5Page(browser, link)
